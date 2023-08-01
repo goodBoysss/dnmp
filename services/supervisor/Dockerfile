@@ -9,6 +9,7 @@ RUN sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/reposi
 RUN apk update \
 	&& apk upgrade \
 	&& apk add supervisor \
+    && apk add php-cli \
 	&& apk --no-cache add tzdata \
     && cp "/usr/share/zoneinfo/$TZ" /etc/localtime \
     && echo "$TZ" > /etc/timezone \
