@@ -1,0 +1,15 @@
+version: "3"
+services:
+  shadowsocks:
+    image: mritd/shadowsocks
+    #image: oddrationale/docker-shadowsocks:latest
+    #command: -s "-s 0.0.0.0 -p ${SHADOWSOCKS_PORT} -k ${SHADOWSOCKS_PASSWORD} -m ${SHADOWSOCKS_METHOD}"
+    command: -s "-c /etc/shadowsocks.json"
+    ports:
+      - "${SHADOWSOCKS_PORT}:${SHADOWSOCKS_PORT}"
+    volumes:
+      - "${SERVICES_DIR}/vpn/shadowsocks.json:/etc/shadowsocks.json"
+    container_name: shadowsocks
+    restart: always
+    networks:
+      - default

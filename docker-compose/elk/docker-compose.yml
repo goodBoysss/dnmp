@@ -1,0 +1,22 @@
+version: "3"
+services:
+  es8_11:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    container_name: es8_11
+    volumes:
+      - /Users/zhanglinxiao/Desktop/www/develop/conf/elasticsearch/config:/usr/share/elasticsearch/config
+    networks:
+      - default
+
+  kib8_11:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    ports:
+      - "5601:5601"
+    container_name: kib8_11
+    volumes:
+      - /Users/zhanglinxiao/Desktop/www/develop/conf/kibana/config:/usr/share/kibana/config
+    networks:
+      - default

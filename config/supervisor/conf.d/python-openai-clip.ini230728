@@ -1,0 +1,5 @@
+[program:python-openai-clip]
+command=docker exec -it python3_11 python /www/python/openai-clip/main.py
+autostart=false
+autorestart=true
+user=zhanglinxiao
