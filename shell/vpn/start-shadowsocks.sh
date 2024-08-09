@@ -1,0 +1,1 @@
+cd /data/www/dnmp/docker-compose/vpn && docker-compose up -d shadowsocks
