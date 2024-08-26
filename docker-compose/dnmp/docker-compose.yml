@@ -2,7 +2,7 @@ version: "3"
 services:
   nginx:
     build:
-      context: ${SERVICES_DIR}/nginx
+      context: ${SERVICES_CONTEXT_DIR}/nginx
       args:
         NGINX_VERSION: nginx:${NGINX_VERSION}
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
@@ -28,7 +28,7 @@ services:
 
   php82:
     build:
-      context: ${SERVICES_DIR}/php82
+      context: ${SERVICES_CONTEXT_DIR}/php82
       args:
         PHP_VERSION: php:${PHP82_VERSION}-fpm-alpine
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
@@ -50,7 +50,7 @@ services:
 
   php81:
     build:
-      context: ${SERVICES_DIR}/php81
+      context: ${SERVICES_CONTEXT_DIR}/php81
       args:
         PHP_VERSION: php:${PHP81_VERSION}-fpm-alpine
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
@@ -58,7 +58,7 @@ services:
         TZ: ${TZ}
     container_name: php81
     volumes:
-      - ${SOURCE_DIR}:/www/:rw
+      - ${SERVICES_CONTEXT_DIR}:/www/:rw
       - ${PHP81_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
       - ${PHP81_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf:rw
       - ${PHP81_LOG_DIR}:/var/log/php
@@ -72,7 +72,7 @@ services:
 
   php74:
     build:
-      context: ${SERVICES_DIR}/php74
+      context: ${SERVICES_CONTEXT_DIR}/php74
       args:
         PHP_VERSION: php:${PHP74_VERSION}-fpm-alpine
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
@@ -94,7 +94,7 @@ services:
 
   php73:
     build:
-      context: ${SERVICES_DIR}/php73
+      context: ${SERVICES_CONTEXT_DIR}/php73
       args:
         PHP_VERSION: php:${PHP73_VERSION}-fpm-alpine
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
@@ -116,7 +116,7 @@ services:
 
   php71:
     build:
-      context: ${SERVICES_DIR}/php71
+      context: ${SERVICES_CONTEXT_DIR}/php71
       args:
         PHP_VERSION: php:${PHP71_VERSION}-fpm-alpine
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
@@ -138,7 +138,7 @@ services:
 
   php70:
     build:
-      context: ${SERVICES_DIR}/php70
+      context: ${SERVICES_CONTEXT_DIR}/php70
       args:
         PHP_VERSION: php:${PHP70_VERSION}-fpm-alpine
         CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
