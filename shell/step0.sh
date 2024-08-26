@@ -1,9 +1,9 @@
 
 # yum install git
-yum install git -y
+apt-get install git -y
 
 # yum install docker and pull dnmp
-mkdir -p /data/www/ && cd /data/www/ && git clone https://github.com/goodBoysss/dnmp.git
+sudo mkdir -p /data/www/ && cd /data/www/ && sudo git clone https://github.com/goodBoysss/dnmp.git
 
 # soon-start-shadowsocks.sh
-sh /data/www/dnmp/shell/soon-start-shadowsocks.sh
+sudo sh /data/www/dnmp/shell/soon-start-shadowsocks.sh
