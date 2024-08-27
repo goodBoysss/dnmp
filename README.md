@@ -12,6 +12,7 @@ docker load -i myimage.tar
 
 ## Description
 > NGINX
+* nginx 1.19.1
 
 > PHP
 * PHP 7.0 
