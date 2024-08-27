@@ -1,0 +1,1 @@
+scp -r ubuntu@43.159.193.11:/data/www/dnmp/docker-compose/dnmp/php82.tar /Users/zhanglinxiao/Desktop/
