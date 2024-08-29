@@ -9,5 +9,5 @@ sudo mkdir -p /data/www/ && cd /data/www/ && sudo git clone https://github.com/g
 # install-docker.sh
 sudo sh /data/www/dnmp/shell/install-docker.sh
 
-# soon-start-shadowsocks.sh
-sudo sh /data/www/dnmp/shell/soon-start-shadowsocks.sh
+# start-shadowsocks
+sh /data/www/dnmp/shell/vpn/start-shadowsocks.sh
