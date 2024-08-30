@@ -41,7 +41,7 @@ docker load -i myimage.tar
 
 * Shadowsocks
 
-## Usage
+## 功能介绍
 
 ### Step 0
 
@@ -71,7 +71,3 @@ cd ./docker-compose/dnmp && docker compose up -d
 [shadowsocks文档](./doc/vpn/shadowsocks.md ':include')
 
 ### 支持的php扩展 [PHP Extensions](./doc/dnmp/PHP-Extensions.md ':include')
-
-## Quote
-
-* [docker-php-extension-installer](https://github.com/mlocati/docker-php-extension-installer)
