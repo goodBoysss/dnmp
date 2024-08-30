@@ -5,6 +5,9 @@ services:
     #image: oddrationale/docker-shadowsocks:latest
     #command: -s "-s 0.0.0.0 -p ${SHADOWSOCKS_PORT} -k ${SHADOWSOCKS_PASSWORD} -m ${SHADOWSOCKS_METHOD}"
     command: -s "-c /etc/shadowsocks.json"
+    environment:
+      - http_proxy=http://127.0.0.1:1087
+      - https_proxy=http://127.0.0.1:1087
     ports:
       - "${SHADOWSOCKS_PORT}:${SHADOWSOCKS_PORT}"
     volumes:

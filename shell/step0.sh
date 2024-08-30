@@ -1,9 +1,7 @@
 
-# apt-get install git
-sudo apt-get install git -y
 
-# yum install docker and pull dnmp
-sudo mkdir -p /data/www/ && cd /data/www/ && sudo git clone https://github.com/goodBoysss/dnmp.git && sudo chown ubuntu -R /data/www/
+# install git && yum install docker && pull dnmp
+sudo apt-get install git -y && sudo mkdir -p /data/www/ && cd /data/www/ && sudo git clone https://github.com/goodBoysss/dnmp.git && sudo chown ubuntu -R /data/www/
 
 
 # install-docker.sh
