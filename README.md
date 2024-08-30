@@ -67,7 +67,13 @@ docker network create app_net
 ```text
 cd ./docker-compose/dnmp && docker compose up -d
 ```
-### VPN-shadowsocks
-[shadowsocks文档](./doc/vpn/shadowsocks.md ':include')
 
-### 支持的php扩展 [PHP Extensions](./doc/dnmp/PHP-Extensions.md ':include')
+#### 支持的php扩展 [PHP Extensions](./doc/dnmp/PHP-Extensions.md ':include')
+
+
+### VPN-shadowsocks
+* shadowsocks服务搭建
+* 使用shadowsocks翻墙拉取docker镜像
+* [shadowsocks文档](./doc/vpn/shadowsocks.md ':include')
+
+
