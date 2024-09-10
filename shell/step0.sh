@@ -1,6 +1,6 @@
 
 
-# install git && yum install docker && pull dnmp
+# install git && pull dnmp
 sudo apt-get install git -y && sudo mkdir -p /data/www/ && cd /data/www/ && sudo git clone https://github.com/goodBoysss/dnmp.git && sudo chown ubuntu -R /data/www/
 
 

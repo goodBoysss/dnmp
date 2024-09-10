@@ -27,6 +27,7 @@ docker load -i myimage.tar
 * PHP 7.4
 * PHP 8.1
 * PHP 8.2
+* PHP 8.3
 
 > MYSQL
 

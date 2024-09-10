@@ -26,6 +26,28 @@ services:
       - default
       - app_net
 
+  php83:
+    build:
+      context: ${SERVICES_DIR}/php83
+      args:
+        PHP_VERSION: php:${PHP83_VERSION}-fpm-alpine
+        CONTAINER_PACKAGE_URL: ${CONTAINER_PACKAGE_URL}
+        PHP_EXTENSIONS: ${PHP83_EXTENSIONS}
+        TZ: ${TZ}
+    container_name: php83
+    volumes:
+      - ${SOURCE_DIR}:/www/:rw
+      - ${PHP83_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
+      - ${PHP83_FPM_CONF_FILE}:/usr/local/etc/php-fpm.d/www.conf:rw
+      - ${PHP83_LOG_DIR}:/var/log/php
+      - ${DATA_DIR}/composer:/tmp/composer
+    restart: always
+    cap_add:
+      - SYS_PTRACE
+    networks:
+      - default
+      - app_net
+
   php82:
     build:
       context: ${SERVICES_DIR}/php82
