@@ -21,7 +21,7 @@
 
 > MYSQL
 
-* MYSQL 5.6
+* MYSQL 5.7
 * MYSQL 8.0
 
 > REDIS
