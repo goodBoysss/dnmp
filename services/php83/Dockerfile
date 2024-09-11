@@ -8,13 +8,17 @@ ARG CONTAINER_PACKAGE_URL
 
 RUN if [ $CONTAINER_PACKAGE_URL ] ; then sed -i "s/dl-cdn.alpinelinux.org/${CONTAINER_PACKAGE_URL}/g" /etc/apk/repositories ; fi
 
-
 COPY ./extensions /tmp/extensions
 WORKDIR /tmp/extensions
 
+# apk 更新
+RUN apk upgrade --no-cache
+
+# Alpine镜像中的telnet在3.7版本后被迁移到busybox-extras中
+RUN apk add --no-cache busybox-extras
+
 #swoole需要libstdc++
-RUN apk upgrade --no-cache && \
-    apk add --no-cache  openssl libgcc libstdc++
+RUN apk add --no-cache  openssl libgcc libstdc++
 
 RUN chmod +x install.sh \
     && sh install.sh
@@ -29,8 +33,8 @@ RUN apk --no-cache add tzdata \
 
 
 # Fix: https://github.com/docker-library/php/issues/240
-RUN apk add --no-cache --repository http://${CONTAINER_PACKAGE_URL}/alpine/v3.18/community/ gnu-libiconv=1.17-r1
-ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
+#RUN apk add --no-cache --repository http://${CONTAINER_PACKAGE_URL}/alpine/v3.18/community/ gnu-libiconv=1.17-r1
+#ENV LD_PRELOAD /usr/lib/preloadable_libiconv.so php
 
 # Install composer and change it's cache home
 RUN curl -o /usr/bin/composer https://mirrors.aliyun.com/composer/composer.phar \

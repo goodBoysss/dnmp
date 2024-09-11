@@ -23,7 +23,7 @@ sh ./shell/vpn/start-shadowsocks.sh
 
 * 1、首先确保已通过小飞机翻墙成功
 * 2、小飞机选择手动模式
-* 3、wifi设置网页代理（http、https）- 127.0.0.1:1087、Socks代理 - 127.0.0.1:1080（注：以上端口请以飞机具体配置为准，路径：偏好设置->高级（Http））
+* 3、wifi设置-高级-网页代理（http、https）- 127.0.0.1:1087、Socks代理 - 127.0.0.1:1080（注：以上端口请以飞机具体配置为准，路径：偏好设置->高级（Http））
 * 4、最后就可以正常使用docker和docker-compose构建镜像啦，测试IP curl cip.cc
 
 
