@@ -11,7 +11,7 @@ failed to solve: rpc error: code = Unknown desc = failed to solve with frontend 
 # 保存镜像
 docker save -o /Users/zhanglinxiao/Desktop/php83.tar dnmp-php83
 
-# scp远程下砸镜像
+# scp远程下载镜像
 scp -r ubuntu@43.128.62.197:/data/www/dnmp/docker-compose/dnmp/php83.tar /Users/zhanglinxiao/Desktop/
 
 # 加载镜像
