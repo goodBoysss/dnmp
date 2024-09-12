@@ -34,8 +34,6 @@
 
 ## 功能介绍
 
-### Step 0
-
 ```shell
 # 懒人模式详见./shell/step0.sh 命令
 
