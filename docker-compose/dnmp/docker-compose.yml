@@ -167,6 +167,9 @@ services:
         PHP_EXTENSIONS: ${PHP70_EXTENSIONS}
         TZ: ${TZ}
     container_name: php70
+    ports:
+      - "9000:9000"
+      - "9003:9003"
     volumes:
       - ${SOURCE_DIR}:/www/:rw
       - ${PHP70_PHP_CONF_FILE}:/usr/local/etc/php/php.ini:ro
