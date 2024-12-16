@@ -1,4 +1,5 @@
 cluster.name: "docker-cluster"
+node.name: node-1
 network.host: 0.0.0.0
 
 #----------------------- BEGIN SECURITY AUTO CONFIGURATION -----------------------
@@ -9,7 +10,7 @@ network.host: 0.0.0.0
 # --------------------------------------------------------------------------------
 
 # Enable security features
-xpack.security.enabled: true
+xpack.security.enabled: false
 
 xpack.security.enrollment.enabled: true
 
@@ -26,6 +27,6 @@ xpack.security.transport.ssl:
   truststore.path: certs/transport.p12
 # Create a new cluster with the current node only
 # Additional nodes can still join the cluster later
-cluster.initial_master_nodes: ["4ab78b1e4431"]
+cluster.initial_master_nodes: ["node-1"]
 
 #----------------------- END SECURITY AUTO CONFIGURATION -------------------------

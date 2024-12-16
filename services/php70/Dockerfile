@@ -21,7 +21,6 @@ ADD ./extensions/install.sh  /usr/local/bin/
 RUN chmod uga+x /usr/local/bin/install-php-extensions
 RUN chmod uga+x /usr/local/bin/install.sh
 
-
 RUN sh /usr/local/bin/install.sh
 
 # time zone

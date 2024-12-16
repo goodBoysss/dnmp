@@ -531,8 +531,7 @@ fi
 
 if [[ -z "${EXTENSIONS##*,xdebug,*}" ]]; then
     echo "---------- Install xdebug ----------"
-    pecl install xdebug
-    docker-php-ext-enable xdebug
+    install-php-extensions xdebug
 fi
 
 if [[ -z "${EXTENSIONS##*,event,*}" ]]; then

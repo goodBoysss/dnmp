@@ -7,7 +7,8 @@ services:
       - "9300:9300"
     container_name: es8_11
     volumes:
-      - /Users/zhanglinxiao/Desktop/www/develop/conf/elasticsearch/config:/usr/share/elasticsearch/config
+      - ${CONFIG_DIR}/elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ${DATA_DIR}/elasticsearch:/usr/share/elasticsearch/data
     networks:
       - default
 
@@ -17,6 +18,6 @@ services:
       - "5601:5601"
     container_name: kib8_11
     volumes:
-      - /Users/zhanglinxiao/Desktop/www/develop/conf/kibana/config:/usr/share/kibana/config
+      - ${CONFIG_DIR}/kibana:/usr/share/kibana/config
     networks:
       - default
